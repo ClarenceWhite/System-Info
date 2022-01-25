@@ -1,3 +1,20 @@
+import socket
+import os
+import platform
+import multiprocessing
+import psutil
+  
+
+print("The name of machine:", socket.gethostname())
+print("The name of OS:", platform.system())
+print("The name of OS version:", platform.release())
+print("The number of CPUs:", multiprocessing.cpu_count())
+print(psutil.virtual_memory().total)
+print('RAM memory used(%):', psutil.virtual_memory()[2])
+print("IP addresss of machine:", socket.gethostbyname(socket.gethostname()))
+
+
+
 import timeit
 import math
 import itertools
